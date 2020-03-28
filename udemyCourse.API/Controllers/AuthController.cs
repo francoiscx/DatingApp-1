@@ -11,6 +11,7 @@ using udemyCourse.API.Data;
 using udemyCourse.API.Dtos;
 using udemyCourse.API.Models;
 
+
 namespace udemyCourse.API.Controllers
 {
 
@@ -49,6 +50,9 @@ namespace udemyCourse.API.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
+            
+                throw new Exception("Dont do that!!!!!");
+
             var userFromRepo = await _repo.Loggin(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
             if (userFromRepo == null)
                 return Unauthorized();
@@ -78,6 +82,8 @@ namespace udemyCourse.API.Controllers
                 return Ok(new{
                     token = tokenHandler.WriteToken(token)
                 });
+        
+            
         }
 
         // check if user exists
