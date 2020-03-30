@@ -51,8 +51,7 @@ namespace udemyCourse.API.Controllers
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
             
-                throw new Exception("Dont do that!!!!!");
-
+           
             var userFromRepo = await _repo.Loggin(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
             if (userFromRepo == null)
                 return Unauthorized();
