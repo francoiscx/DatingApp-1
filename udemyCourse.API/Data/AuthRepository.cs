@@ -51,7 +51,7 @@ namespace udemyCourse.API.Data
 
             return user;
         }
-
+// create password hash
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
             using(var hmac = new System.Security.Cryptography.HMACSHA512())
