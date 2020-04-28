@@ -41,7 +41,7 @@ namespace udemyCourse.API.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("photos");
+                    b.ToTable("Photos");
                 });
 
             modelBuilder.Entity("udemyCourse.API.Models.User", b =>

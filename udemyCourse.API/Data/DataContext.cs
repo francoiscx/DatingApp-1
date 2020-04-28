@@ -11,6 +11,6 @@ namespace udemyCourse.API.Data
 // setting databse with tables
         public DbSet<value> Values { get; set; }
        public DbSet<User> Users { get; set; }
-       public DbSet <Photo> photos { get; set; }
+       public DbSet<Photo> Photos { get; set; }
     }
 }
