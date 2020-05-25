@@ -1,0 +1,42 @@
+/* Zooms image when hovering over the card class */
+.card:hover img{
+    transform: scale(1.2, 1.2);
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    opacity: 1;
+}
+/* Zoom back to normal when not hovering on card class */
+.card img {
+    transform: scale(1.0, 1.0);
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    opacity: 0.7;
+}
+
+/* creating boundaries for the zoom */
+.card-image-wrapper {
+    overflow:hidden;
+    position: relative;
+}
+
+/* setting positions of icons */
+.member-icons{
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+}
+/* display icons on the image when hovered over (the container should be styled to have position of relative*/
+.card-image-wrapper:hover .member-icons{
+      bottom: 0%;
+    left: 0;
+    opacity: 1;
+}
+
+/* amimate buttons */
+.animate{
+    transition: all 0.3s ease-in-out;
+}
