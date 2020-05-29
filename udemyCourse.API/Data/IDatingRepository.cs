@@ -15,6 +15,8 @@ namespace udemyCourse.API.Data
         // Get a list of users
         Task<IEnumerable<User>> GetUsers();
         Task<User> GetUser(int id);
+        Task<Photo> GetPhoto(int id);
+        Task<Photo> GetMainPhotoForUser(int userId);
 
     }
 }
